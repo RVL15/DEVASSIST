@@ -1,0 +1,1383 @@
+2026-04-29 10:54:53,864 [INFO] main: DevAssist backend starting...
+2026-04-29 10:58:53,638 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:02:58,333 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:12:31,753 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:13:09,395 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:13:10,692 [INFO] main: DevAssist backend starting...
+2026-04-29 11:13:10,952 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:13:19,129 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:15:44,123 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:15:45,355 [INFO] main: DevAssist backend starting...
+2026-04-29 11:20:44,456 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:20:45,957 [INFO] main: DevAssist backend starting...
+2026-04-29 11:20:47,318 [INFO] main: DevAssist backend starting...
+2026-04-29 11:29:46,839 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:31:49,304 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:31:49,498 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:31:52,987 [INFO] main: DevAssist backend starting...
+2026-04-29 11:32:36,003 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:34:57,752 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:36:53,079 [INFO] main: DevAssist backend starting...
+2026-04-29 11:37:12,750 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:37:21,964 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:38:02,176 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:38:09,262 [INFO] main: DevAssist backend starting...
+2026-04-29 11:38:38,999 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:41:04,762 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:43:22,806 [INFO] main: DevAssist backend starting...
+2026-04-29 11:43:47,207 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:43:49,117 [INFO] main: DevAssist backend starting...
+2026-04-29 11:43:57,487 [ERROR] main: Unhandled exception: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 39, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\main.py", line 44, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 83, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: Client error '404 Not Found' for url 'http://localhost:11434/api/generate'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+2026-04-29 11:44:26,748 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:44:26,786 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:44:26,836 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:44:38,616 [INFO] main: DevAssist backend starting...
+2026-04-29 11:44:38,753 [INFO] main: DevAssist backend starting...
+2026-04-29 11:44:39,771 [INFO] main: DevAssist backend starting...
+2026-04-29 11:45:45,233 [INFO] main: DevAssist backend starting...
+2026-04-29 11:45:45,234 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:46:00,605 [INFO] main: DevAssist backend starting...
+2026-04-29 11:46:00,608 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:46:16,823 [INFO] main: DevAssist backend starting...
+2026-04-29 11:47:09,740 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:47:09,775 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:47:09,897 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:47:13,656 [INFO] main: DevAssist backend starting...
+2026-04-29 11:47:13,663 [INFO] main: DevAssist backend starting...
+2026-04-29 11:47:13,687 [INFO] main: DevAssist backend starting...
+2026-04-29 11:47:35,273 [INFO] main: DevAssist backend starting...
+2026-04-29 11:48:52,373 [INFO] main: DevAssist backend starting...
+2026-04-29 11:48:52,374 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:49:15,416 [INFO] main: DevAssist backend starting...
+2026-04-29 11:49:21,751 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:49:24,013 [INFO] main: DevAssist backend starting...
+2026-04-29 11:49:33,745 [INFO] main: DevAssist backend starting...
+2026-04-29 11:49:40,673 [INFO] main: [1524b16c] GET / -> 200 (1.1ms)
+2026-04-29 11:49:40,725 [INFO] main: [68b41855] GET /health -> 200 (1.1ms)
+2026-04-29 11:49:56,765 [INFO] main: [a43cb7e2] GET /health -> 200 (0.6ms)
+2026-04-29 11:50:06,115 [INFO] main: [c695624f] GET / -> 200 (1.1ms)
+2026-04-29 11:50:17,449 [INFO] main: [476f6caa] GET / -> 200 (1.1ms)
+2026-04-29 11:51:26,043 [WARNING] api.routes.generate: Generate parse failed: Expecting value: line 1 column 1 (char 0)
+2026-04-29 11:51:26,046 [INFO] main: [e8a48801] POST /api/v1/generate -> 200 (20383.6ms)
+2026-04-29 11:51:38,088 [INFO] main: [f0afe4ce] GET / -> 200 (1.1ms)
+2026-04-29 11:51:40,319 [INFO] main: [bd6bf32a] GET / -> 200 (0.6ms)
+2026-04-29 11:52:10,548 [INFO] main: DevAssist backend shutdown.
+2026-04-29 11:52:12,644 [INFO] main: DevAssist backend starting...
+2026-04-29 11:52:25,853 [INFO] main: [698ca0d0] GET /health -> 200 (0.4ms)
+2026-04-29 11:52:37,768 [INFO] main: [9d13e010] GET /health -> 200 (0.4ms)
+2026-04-29 11:52:41,329 [INFO] main: [9cbc9b36] POST /api/v1/autocomplete -> 200 (3450.2ms)
+2026-04-29 11:53:00,284 [INFO] main: [2556253c] POST /api/v1/explain -> 200 (18947.0ms)
+2026-04-29 11:53:34,944 [WARNING] api.routes.bugfix: Bug parse failed: Expecting value: line 1 column 1 (char 0) | raw=Based on the provided Python code, we can identify several potential bugs:
+
+1. Logical Bugs: The `return` statement is not used in the function definition. This means that the function will always ret
+2026-04-29 11:53:39,916 [INFO] main: [278dbb72] POST /api/v1/bugfix -> 200 (39627.6ms)
+2026-04-29 11:53:47,062 [WARNING] api.routes.refactor: Refactor parse failed: Expecting value: line 1 column 1 (char 0)
+2026-04-29 11:53:47,063 [INFO] main: [b45fbcc4] POST /api/v1/refactor -> 200 (7135.9ms)
+2026-04-29 11:53:52,370 [INFO] main: [16385f83] POST /api/v1/generate -> 200 (5296.2ms)
+2026-04-29 11:53:57,227 [INFO] main: [f5a5bac4] POST /api/v1/chat -> 200 (4849.5ms)
+2026-04-29 11:53:57,233 [INFO] main: [5b322285] DELETE /api/v1/chat/live-session -> 200 (0.9ms)
+2026-04-29 11:54:23,978 [INFO] main: [d53c0e5e] GET / -> 200 (0.6ms)
+2026-04-29 12:02:24,968 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:02:27,622 [INFO] main: DevAssist backend starting...
+2026-04-29 12:02:31,130 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:02:33,536 [INFO] main: DevAssist backend starting...
+2026-04-29 12:03:14,890 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:03:17,653 [INFO] main: DevAssist backend starting...
+2026-04-29 12:03:22,387 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:03:25,052 [INFO] main: DevAssist backend starting...
+2026-04-29 12:03:32,574 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:03:35,574 [INFO] main: DevAssist backend starting...
+2026-04-29 12:03:35,779 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:03:38,233 [INFO] main: DevAssist backend starting...
+2026-04-29 12:03:41,414 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:03:43,682 [INFO] main: DevAssist backend starting...
+2026-04-29 12:03:56,935 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:04:00,207 [INFO] main: DevAssist backend starting...
+2026-04-29 12:04:05,135 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:04:07,459 [INFO] main: DevAssist backend starting...
+2026-04-29 12:04:12,746 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:04:15,794 [INFO] main: DevAssist backend starting...
+2026-04-29 12:04:23,597 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:04:26,071 [INFO] main: DevAssist backend starting...
+2026-04-29 12:04:31,004 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:04:33,282 [INFO] main: DevAssist backend starting...
+2026-04-29 12:07:15,927 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:07:19,150 [INFO] main: DevAssist backend starting...
+2026-04-29 12:16:03,644 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:16:06,480 [INFO] main: DevAssist backend starting...
+2026-04-29 12:16:20,756 [INFO] main: [275ed405] GET / -> 200 (10.0ms)
+2026-04-29 12:16:23,439 [INFO] main: [4a75cef2] GET / -> 200 (0.6ms)
+2026-04-29 12:16:28,772 [INFO] main: [f0a5b825] GET / -> 200 (0.7ms)
+2026-04-29 12:16:29,172 [INFO] main: [aa32389a] GET / -> 200 (0.6ms)
+2026-04-29 12:17:17,157 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:17:19,807 [INFO] main: DevAssist backend starting...
+2026-04-29 12:21:18,622 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:21:21,138 [INFO] main: DevAssist backend starting...
+2026-04-29 12:21:30,515 [INFO] main: DevAssist backend starting...
+2026-04-29 12:21:42,459 [INFO] main: [e4eae12e] GET / -> 200 (1.1ms)
+2026-04-29 12:21:44,613 [INFO] main: [14b0c10a] GET /tools/generate -> 404 (0.5ms)
+2026-04-29 12:22:16,391 [INFO] main: [6b18b008] GET /tools/generate -> 404 (0.4ms)
+2026-04-29 12:22:17,544 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:22:19,954 [INFO] main: DevAssist backend starting...
+2026-04-29 12:23:06,505 [INFO] main: [cf42e404] GET /tools/generate -> 404 (0.6ms)
+2026-04-29 12:23:29,036 [INFO] main: [ae18d6c0] GET / -> 200 (0.7ms)
+2026-04-29 12:24:22,065 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:24:24,621 [INFO] main: DevAssist backend starting...
+2026-04-29 12:24:54,131 [INFO] main: DevAssist backend starting...
+2026-04-29 12:25:07,478 [INFO] main: [02c6e1ac] GET / -> 200 (94.6ms)
+2026-04-29 12:25:09,791 [INFO] main: [65ae8e5e] GET /tools/generate -> 200 (1.1ms)
+2026-04-29 12:25:34,507 [INFO] main: [378a7d8f] GET /assets/index-C35iHtkV.js -> 200 (1.9ms)
+2026-04-29 12:25:46,922 [INFO] main: [950fc79e] POST /api/v1/auth/login -> 200 (3.0ms)
+2026-04-29 12:25:56,886 [INFO] main: [8b8e3a8d] POST /api/v1/generate -> 200 (9890.1ms)
+2026-04-29 12:26:48,565 [INFO] main: [c148f411] GET / -> 200 (2.0ms)
+2026-04-29 12:26:50,195 [INFO] main: [9747c266] GET /tools/generate -> 200 (1.5ms)
+2026-04-29 12:27:03,286 [INFO] main: [d97de0b9] GET / -> 200 (2.4ms)
+2026-04-29 12:27:03,360 [INFO] main: [4707368a] GET /assets/index-C35iHtkV.js -> 200 (5.9ms)
+2026-04-29 12:27:03,460 [INFO] main: [b2857cd8] GET /api/v1/auth/me -> 401 (1.1ms)
+2026-04-29 12:27:07,783 [INFO] main: [3d611c9e] POST /api/v1/auth/login -> 200 (3.9ms)
+2026-04-29 12:27:07,798 [INFO] main: [dcbbfb5c] GET /api/v1/auth/me -> 200 (0.8ms)
+2026-04-29 12:27:17,904 [INFO] main: DevAssist backend shutdown.
+2026-04-29 12:27:21,282 [INFO] main: DevAssist backend starting...
+2026-04-29 12:27:23,602 [WARNING] api.routes.generate: Generate parse failed: Extra data: line 3 column 1 (char 48)
+2026-04-29 12:27:23,603 [INFO] main: [2e896c27] POST /api/v1/generate -> 200 (6090.7ms)
+2026-04-29 12:28:01,634 [INFO] main: [88c5e2d9] POST /api/v1/chat -> 200 (19474.2ms)
+2026-04-29 12:45:03,654 [INFO] main: [45284b6a] GET /api/v1/auth/me -> 401 (7.9ms)
+2026-04-29 12:45:03,671 [INFO] main: [ea996f67] GET /api/v1/auth/me -> 401 (4.6ms)
+2026-04-29 12:46:21,856 [INFO] main: [1617c50a] OPTIONS /api/v1/auth/login -> 200 (7.1ms)
+2026-04-29 12:46:21,896 [INFO] main: [338233fb] POST /api/v1/auth/login -> 200 (29.0ms)
+2026-04-29 12:46:21,914 [INFO] main: [181f49b1] GET /api/v1/auth/me -> 401 (0.8ms)
+2026-04-29 12:46:35,198 [INFO] main: [a6823986] POST /api/v1/auth/login -> 200 (6.5ms)
+2026-04-29 12:46:35,211 [INFO] main: [6f1aa0cd] GET /api/v1/auth/me -> 401 (1.4ms)
+2026-04-29 12:47:09,166 [INFO] main: [f45f8244] POST /api/v1/auth/login -> 200 (7.6ms)
+2026-04-29 12:47:09,197 [INFO] main: [90639e1d] GET /api/v1/auth/me -> 401 (2.7ms)
+2026-04-29 12:47:25,444 [INFO] main: [d0f387bc] GET /api/v1/auth/me -> 401 (0.7ms)
+2026-04-29 12:47:25,459 [INFO] main: [b1b51714] GET /api/v1/auth/me -> 401 (1.3ms)
+2026-04-29 12:47:45,505 [INFO] main: [6a0f1dcb] POST /api/v1/auth/login -> 200 (4.1ms)
+2026-04-29 12:47:45,519 [INFO] main: [a8666e9e] GET /api/v1/auth/me -> 401 (1.2ms)
+2026-04-29 12:48:36,408 [INFO] main: [de228273] POST /api/v1/auth/login -> 200 (8.6ms)
+2026-04-29 12:48:36,427 [INFO] main: [1136abab] GET /api/v1/auth/me -> 401 (5.1ms)
+2026-04-29 12:48:43,450 [INFO] main: [cd5eeab4] POST /api/v1/auth/login -> 200 (3.5ms)
+2026-04-29 12:48:43,467 [INFO] main: [e5979abd] GET /api/v1/auth/me -> 401 (3.4ms)
+2026-04-29 12:48:54,686 [INFO] main: [88fa6246] GET /api/v1/auth/me -> 401 (1.5ms)
+2026-04-29 12:48:54,700 [INFO] main: [e802a737] GET /api/v1/auth/me -> 401 (1.3ms)
+2026-04-29 12:49:19,146 [INFO] main: [01389d6d] POST /api/v1/auth/login -> 200 (11.1ms)
+2026-04-29 12:49:19,176 [INFO] main: [016c719e] GET /api/v1/auth/me -> 401 (1.9ms)
+2026-04-29 12:49:48,637 [INFO] main: [03ab3e11] GET /api/v1/auth/me -> 401 (3.0ms)
+2026-04-29 12:49:48,844 [INFO] main: [fc5464d8] GET /favicon.ico -> 200 (112.5ms)
+2026-04-29 12:50:01,924 [INFO] main: [2d08ca0a] GET /api/v1/auth/me -> 401 (1.9ms)
+2026-04-29 12:50:01,940 [INFO] main: [47cc8be8] GET /api/v1/auth/me -> 401 (2.8ms)
+2026-04-29 12:50:21,138 [INFO] main: [d820c28c] POST /api/v1/auth/login -> 200 (5.6ms)
+2026-04-29 12:50:21,160 [INFO] main: [6309e54a] GET /api/v1/auth/me -> 401 (1.9ms)
+2026-04-29 12:50:41,295 [INFO] main: [a81a3980] POST /api/v1/auth/login -> 200 (4.3ms)
+2026-04-29 12:50:41,325 [INFO] main: [caaf3d48] GET /api/v1/auth/me -> 401 (2.3ms)
+2026-04-29 12:51:30,801 [INFO] main: [882b62be] POST /api/v1/auth/login -> 200 (7.2ms)
+2026-04-29 12:51:30,828 [INFO] main: [821c5ad6] GET /api/v1/auth/me -> 401 (1.2ms)
+2026-04-29 12:52:39,965 [INFO] main: [12b7d68b] POST /api/v1/auth/login -> 200 (8.3ms)
+2026-04-29 12:52:39,994 [INFO] main: [de7ff1c8] GET /api/v1/auth/me -> 401 (2.3ms)
+2026-04-29 12:52:59,762 [INFO] main: [32db7e79] POST /api/v1/auth/login -> 401 (5.1ms)
+2026-04-29 12:53:16,585 [INFO] main: [f7945a00] POST /api/v1/auth/login -> 200 (4.3ms)
+2026-04-29 12:53:16,598 [INFO] main: [d366d049] GET /api/v1/auth/me -> 401 (1.0ms)
+2026-04-29 12:53:34,980 [INFO] main: [919068de] POST /api/v1/auth/login -> 200 (8.0ms)
+2026-04-29 12:53:35,001 [INFO] main: [b87b9db9] GET /api/v1/auth/me -> 401 (3.4ms)
+2026-04-29 12:54:02,049 [INFO] main: [a6f7deee] POST /api/v1/auth/login -> 200 (29.6ms)
+2026-04-29 12:54:02,079 [INFO] main: [63c7a1bd] GET /api/v1/auth/me -> 401 (1.9ms)
+2026-04-29 12:57:50,754 [INFO] main: [559a6a8e] OPTIONS /api/v1/auth/login -> 200 (1.1ms)
+2026-04-29 12:57:50,778 [INFO] main: [b6dc42ef] POST /api/v1/auth/login -> 200 (6.5ms)
+2026-04-29 12:57:50,794 [INFO] main: [4978bb63] GET /api/v1/auth/me -> 401 (1.1ms)
+2026-04-29 12:58:08,145 [INFO] main: [ea4c0d74] GET /health -> 200 (2.6ms)
+2026-04-29 12:59:04,403 [INFO] main: [fc9feed8] GET /api/v1/auth/me -> 401 (0.8ms)
+2026-04-29 12:59:04,412 [INFO] main: [f4e21311] GET /api/v1/auth/me -> 401 (2.7ms)
+2026-04-29 12:59:40,352 [INFO] main: [f1b2f8e5] GET /api/v1/auth/me -> 401 (3.5ms)
+2026-04-29 12:59:40,364 [INFO] main: [6841c818] GET /api/v1/auth/me -> 401 (1.6ms)
+2026-04-29 12:59:58,364 [INFO] main: [602c2f97] POST /api/v1/auth/login -> 401 (3.3ms)
+2026-04-29 13:00:28,013 [INFO] main: [ae5b8585] GET /api/v1/auth/me -> 401 (2.3ms)
+2026-04-29 13:00:28,025 [INFO] main: [f74a8123] GET /api/v1/auth/me -> 401 (3.6ms)
+2026-04-29 13:00:33,783 [INFO] main: [18ae0041] GET /health -> 200 (2.5ms)
+2026-04-29 13:00:33,898 [INFO] main: [3711c6f2] GET /favicon.ico -> 200 (2.5ms)
+2026-04-29 13:00:56,416 [INFO] main: [1220a2e7] POST /api/v1/auth/login -> 200 (7.4ms)
+2026-04-29 13:00:56,440 [INFO] main: [6dea58b9] GET /api/v1/auth/me -> 401 (1.2ms)
+2026-04-29 13:01:31,822 [INFO] main: [a4dea1a2] GET /api/v1/auth/me -> 401 (1.1ms)
+2026-04-29 13:01:31,834 [INFO] main: [d3a608bd] GET /api/v1/auth/me -> 401 (2.9ms)
+2026-04-29 13:03:01,722 [INFO] main: [5c604d5d] GET /api/v1/auth/me -> 401 (1.6ms)
+2026-04-29 13:03:01,736 [INFO] main: [f9cd6942] GET /api/v1/auth/me -> 401 (1.4ms)
+2026-04-29 13:03:54,664 [INFO] main: [c30a5351] POST /api/v1/auth/login -> 200 (3.8ms)
+2026-04-29 13:04:12,021 [INFO] main: [98d676c1] GET /api/v1/auth/me -> 401 (1.5ms)
+2026-04-29 13:04:12,032 [INFO] main: [1881ada6] GET /api/v1/auth/me -> 401 (1.1ms)
+2026-04-29 13:04:29,594 [INFO] main: [00933f08] GET /api/v1/auth/me -> 401 (2.6ms)
+2026-04-29 13:04:29,713 [INFO] main: [10de77d4] GET /api/v1/auth/me -> 401 (56.7ms)
+2026-04-29 13:04:51,904 [INFO] main: [7d56ddbc] GET /api/v1/auth/me -> 401 (0.6ms)
+2026-04-29 13:04:51,918 [INFO] main: [b564e584] GET /api/v1/auth/me -> 401 (0.6ms)
+2026-04-29 13:05:29,880 [INFO] main: [1075e577] POST /api/v1/auth/login -> 200 (9.2ms)
+2026-04-29 13:05:30,230 [INFO] main: [a7095cb5] GET /api/v1/auth/me -> 200 (1.4ms)
+2026-04-29 13:06:15,990 [INFO] main: [7b721b79] GET /api/v1/auth/me -> 200 (1.2ms)
+2026-04-29 13:06:16,130 [INFO] main: [a6eff0dd] GET /api/v1/auth/me -> 200 (1.0ms)
+2026-04-29 13:06:22,866 [INFO] main: [26f29eda] GET /api/v1/auth/me -> 200 (3.1ms)
+2026-04-29 13:06:22,883 [INFO] main: [0a8e5bc7] GET /api/v1/auth/me -> 200 (1.5ms)
+2026-04-29 13:12:06,179 [INFO] main: [245dd321] GET /api/v1/auth/me -> 200 (1.5ms)
+2026-04-29 13:12:06,193 [INFO] main: [8b561eb4] GET /api/v1/auth/me -> 200 (0.9ms)
+2026-04-29 13:12:06,721 [INFO] main: [552afebd] GET /health -> 200 (4.1ms)
+2026-04-29 13:12:06,741 [INFO] main: [253feceb] GET /health -> 200 (1.5ms)
+2026-04-29 13:12:21,899 [INFO] main: [ffa44c12] POST /api/v1/auth/logout -> 200 (3.0ms)
+2026-04-29 13:12:22,187 [INFO] main: [6affc245] GET /api/v1/auth/me -> 401 (1.1ms)
+2026-04-29 13:12:35,114 [INFO] main: [3d616db3] POST /api/v1/auth/login -> 200 (5.6ms)
+2026-04-29 13:12:35,451 [INFO] main: [9daf2cfa] GET /api/v1/auth/me -> 200 (2.0ms)
+2026-04-29 13:12:35,902 [INFO] main: [14ab9e85] GET /health -> 200 (35.5ms)
+2026-04-29 13:12:38,238 [INFO] main: [ff4a9ef7] GET /health -> 200 (0.9ms)
+2026-04-29 13:14:11,250 [INFO] main: [c44cf11a] GET /health -> 200 (1.2ms)
+2026-04-29 13:14:11,519 [INFO] main: [0b996e9a] GET /health -> 200 (2.6ms)
+2026-04-29 13:17:33,465 [WARNING] api.routes.generate: Generate parse failed: Expecting value: line 1 column 1 (char 0)
+2026-04-29 13:17:33,472 [INFO] main: [4bc63801] POST /api/v1/generate -> 200 (16420.2ms)
+2026-04-29 13:18:09,814 [INFO] main: [09e82779] POST /api/v1/generate -> 200 (5031.1ms)
+2026-04-29 13:18:59,617 [WARNING] api.routes.generate: Generate parse failed: Expecting value: line 1 column 1 (char 0)
+2026-04-29 13:18:59,617 [INFO] main: [befa8062] POST /api/v1/generate -> 200 (28099.4ms)
+2026-04-29 13:19:16,918 [INFO] main: [5ef92499] GET / -> 200 (6.5ms)
+2026-04-29 13:19:17,059 [INFO] main: [c5e91395] GET /assets/index-BuPme5zq.js -> 200 (70.4ms)
+2026-04-29 13:19:17,099 [INFO] main: [5a1986fb] GET /assets/index-BEL6MPTr.css -> 200 (103.9ms)
+2026-04-29 13:19:18,314 [INFO] main: [3aa1ff09] GET /api/v1/auth/me -> 200 (1.0ms)
+2026-04-29 13:19:18,341 [INFO] main: [1e41c9ff] GET /health -> 200 (0.5ms)
+2026-04-29 13:19:21,250 [INFO] main: [ac16f390] GET /health -> 200 (0.9ms)
+2026-04-29 13:19:34,194 [INFO] main: [cbb21f59] GET /api/v1/auth/me -> 200 (1.2ms)
+2026-04-29 13:19:34,477 [INFO] main: [9e9f7ebf] GET /api/v1/auth/me -> 200 (12.7ms)
+2026-04-29 17:41:57,768 [INFO] main: [78830da1] GET /api/v1/auth/me -> 401 (2.3ms)
+2026-04-29 17:41:57,774 [INFO] main: [a13e5c8c] GET /api/v1/auth/me -> 401 (0.4ms)
+2026-04-29 17:42:26,320 [INFO] main: [9425c328] GET /api/v1/auth/me -> 401 (1.0ms)
+2026-04-29 17:42:26,333 [INFO] main: [1dd315b5] GET /api/v1/auth/me -> 401 (1.2ms)
+2026-04-29 17:42:36,009 [INFO] main: [541f5f5b] POST /api/v1/auth/login -> 200 (38.8ms)
+2026-04-29 17:42:36,042 [INFO] main: [74a58f8d] GET /api/v1/auth/me -> 200 (1.0ms)
+2026-04-29 17:42:36,645 [INFO] main: [5d309908] GET /health -> 200 (0.9ms)
+2026-04-29 17:42:36,908 [INFO] main: [8e6e6394] GET /health -> 200 (1.0ms)
+2026-04-29 17:44:33,890 [INFO] main: [18734c60] GET /health -> 200 (2.9ms)
+2026-04-29 17:44:34,146 [INFO] main: [ba82fe61] GET /health -> 200 (1.3ms)
+2026-04-29 17:47:31,585 [INFO] main: [8e288bc0] GET /api/v1/auth/me -> 200 (0.4ms)
+2026-04-29 17:47:31,589 [INFO] main: [137929a4] GET /api/v1/auth/me -> 200 (0.4ms)
+2026-04-29 17:47:31,628 [INFO] main: [a585ca8d] GET /health -> 200 (0.4ms)
+2026-04-29 17:47:31,752 [INFO] main: [9f7a4c33] GET /health -> 200 (0.3ms)
+2026-04-29 17:48:14,653 [INFO] main: [72a43f99] POST /api/v1/generate -> 200 (11713.0ms)
+2026-04-29 17:48:46,269 [INFO] main: [1464e945] GET /api/v1/auth/me -> 200 (1.4ms)
+2026-04-29 17:48:46,286 [INFO] main: [e84c8449] GET /api/v1/auth/me -> 200 (3.1ms)
+2026-04-29 17:49:25,611 [WARNING] api.routes.generate: Generate parse failed: Expecting value: line 1 column 1 (char 0)
+2026-04-29 17:49:25,614 [INFO] main: [af832f8b] POST /api/v1/generate -> 200 (13541.9ms)
+2026-04-29 17:50:09,128 [INFO] main: [785dc537] GET /health -> 200 (0.7ms)
+2026-04-29 17:55:27,593 [INFO] main: [57e82886] GET /health -> 200 (0.6ms)
+2026-04-29 17:55:28,046 [INFO] main: [2e748b9e] GET /api/v1/auth/me -> 200 (1.6ms)
+2026-04-29 17:55:28,056 [INFO] main: [62c57555] GET /api/v1/auth/me -> 200 (0.5ms)
+2026-04-29 17:56:21,363 [INFO] main: [9188c43b] GET /health -> 200 (0.6ms)
+2026-04-29 17:57:33,907 [INFO] main: [ab6fb600] GET /api/v1/auth/me -> 200 (1.1ms)
+2026-04-29 17:57:33,935 [INFO] main: [32850d7e] GET /api/v1/auth/me -> 200 (0.8ms)
+2026-04-29 17:58:17,792 [WARNING] api.routes.generate: Generate parse failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-29 17:58:17,794 [INFO] main: [f8155d48] POST /api/v1/generate -> 200 (102105.4ms)
+2026-04-29 18:02:40,713 [INFO] main: [132fd6fd] GET /api/v1/auth/me -> 200 (0.7ms)
+2026-04-29 18:02:40,724 [INFO] main: [4dc27f85] GET /api/v1/auth/me -> 200 (0.6ms)
+2026-04-29 18:03:37,200 [INFO] main: [dec7d4e1] GET / -> 200 (13.2ms)
+2026-04-29 18:03:37,235 [INFO] main: [e20dcf80] GET /assets/index-BuPme5zq.js -> 304 (15.6ms)
+2026-04-29 18:03:37,241 [INFO] main: [9a65f257] GET /assets/index-BEL6MPTr.css -> 304 (19.7ms)
+2026-04-29 18:03:37,370 [INFO] main: [dffbff99] GET /api/v1/auth/me -> 401 (0.6ms)
+2026-04-29 18:03:39,734 [INFO] main: [106fc24d] POST /api/v1/auth/login -> 200 (49.4ms)
+2026-04-29 18:03:39,831 [INFO] main: [c726a41d] GET /api/v1/auth/me -> 200 (27.8ms)
+2026-04-29 18:03:40,241 [INFO] main: [4179fa3a] GET /health -> 200 (0.8ms)
+2026-04-29 19:06:43,714 [INFO] main: [b99ff1ff] GET /api/v1/auth/me -> 401 (6.0ms)
+2026-04-29 19:06:43,736 [INFO] main: [c1cfb32b] GET /api/v1/auth/me -> 401 (1.5ms)
+2026-04-29 19:06:49,627 [INFO] main: [2200337c] POST /api/v1/auth/login -> 200 (43.7ms)
+2026-04-29 19:06:49,641 [INFO] main: [ed92ec6c] GET /api/v1/auth/me -> 200 (2.4ms)
+2026-04-29 19:06:49,682 [INFO] main: [0d9bfed6] GET /health -> 200 (1.4ms)
+2026-04-29 19:06:49,688 [INFO] main: [3d64cfc1] GET /health -> 200 (0.9ms)
+2026-04-29 19:06:54,228 [INFO] main: [0f501d04] POST /api/v1/auth/logout -> 200 (5.5ms)
+2026-04-29 19:06:54,483 [INFO] main: [d3bfef2d] GET /api/v1/auth/me -> 401 (0.6ms)
+2026-04-29 19:06:56,623 [INFO] main: [71998f97] POST /api/v1/auth/login -> 200 (5.7ms)
+2026-04-29 19:06:56,952 [INFO] main: [dbc3122b] GET /api/v1/auth/me -> 200 (1.8ms)
+2026-04-29 19:06:57,221 [INFO] main: [159f7f8d] GET /health -> 200 (1.1ms)
+2026-04-29 19:06:57,308 [INFO] main: [7e0b0ab2] GET /health -> 200 (0.5ms)
+2026-04-29 19:07:00,040 [INFO] main: [89f4d054] GET /health -> 200 (0.7ms)
+2026-04-29 19:07:00,367 [INFO] main: [f587dfad] GET /health -> 200 (1.8ms)
+2026-04-29 19:07:02,574 [INFO] main: [ed084968] GET /health -> 200 (0.7ms)
+2026-04-29 19:07:03,392 [INFO] main: [de1f04eb] GET /health -> 200 (0.6ms)
+2026-04-29 19:07:04,341 [INFO] main: [0a2ec80f] GET /health -> 200 (0.5ms)
+2026-04-29 19:07:04,665 [INFO] main: [becdefbb] GET /health -> 200 (1.3ms)

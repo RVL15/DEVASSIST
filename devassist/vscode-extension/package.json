@@ -1,0 +1,61 @@
+{
+  "name": "devassist",
+  "displayName": "DevAssist — Local AI Coding Assistant",
+  "description": "AI-powered code autocomplete, explain, bugfix and refactor via local LLM",
+  "version": "1.0.0",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["AI", "Programming Languages", "Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "DevAssist",
+      "properties": {
+        "devassist.backendUrl": {
+          "type": "string",
+          "default": "http://localhost:8000",
+          "description": "DevAssist FastAPI backend URL"
+        },
+        "devassist.autocompleteEnabled": {
+          "type": "boolean",
+          "default": true
+        },
+        "devassist.language": {
+          "type": "string",
+          "default": "auto"
+        }
+      }
+    },
+    "commands": [
+      { "command": "devassist.explain",  "title": "DevAssist: Explain Code" },
+      { "command": "devassist.bugfix",   "title": "DevAssist: Detect & Fix Bugs" },
+      { "command": "devassist.refactor", "title": "DevAssist: Refactor Code" },
+      { "command": "devassist.generate", "title": "DevAssist: Generate Code from Prompt" },
+      { "command": "devassist.chat",     "title": "DevAssist: Open Chat" }
+    ],
+    "menus": {
+      "editor/context": [
+        { "command": "devassist.explain",  "group": "devassist@1", "when": "editorHasSelection" },
+        { "command": "devassist.bugfix",   "group": "devassist@2" },
+        { "command": "devassist.refactor", "group": "devassist@3", "when": "editorHasSelection" }
+      ]
+    },
+    "keybindings": [
+      { "command": "devassist.explain",  "key": "ctrl+shift+e", "mac": "cmd+shift+e", "when": "editorHasSelection" },
+      { "command": "devassist.bugfix",   "key": "ctrl+shift+b", "mac": "cmd+shift+b" },
+      { "command": "devassist.refactor", "key": "ctrl+shift+r", "mac": "cmd+shift+r", "when": "editorHasSelection" },
+      { "command": "devassist.generate", "key": "ctrl+shift+g", "mac": "cmd+shift+g" }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
