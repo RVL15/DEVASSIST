@@ -1839,3 +1839,269 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2026-05-06 21:54:52,048 [INFO] __main__: [25fa2c5d] GET /health -> 200 (0.9ms)
 2026-05-06 21:55:06,483 [INFO] __main__: [ea0b48d4] POST /api/v1/chat -> 200 (1543.1ms)
 2026-05-06 21:55:48,113 [INFO] __main__: [fb125148] DELETE /api/v1/chat/mg1ren1lt3l -> 200 (7.0ms)
+2026-05-06 22:11:32,260 [INFO] __main__: [f259692b] GET /api/v1/auth/me -> 200 (38.5ms)
+2026-05-06 22:11:32,301 [INFO] __main__: [43df064e] GET /api/v1/auth/me -> 200 (1.0ms)
+2026-05-06 22:11:35,790 [ERROR] __main__: Unhandled exception: Groq API chat failed: Client error '401 Unauthorized' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 53, in chat
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\chat.py", line 20, in chat
+    reply = await ollama.chat(messages, system=system)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 60, in chat
+    raise OllamaError(f"Groq API chat failed: {str(e) or 'Unknown HTTP error'}") from e
+services.ollama_service.OllamaError: Groq API chat failed: Client error '401 Unauthorized' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+2026-05-06 22:12:42,893 [ERROR] __main__: Unhandled exception: Groq API chat failed: Client error '401 Unauthorized' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 53, in chat
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\chat.py", line 20, in chat
+    reply = await ollama.chat(messages, system=system)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 60, in chat
+    raise OllamaError(f"Groq API chat failed: {str(e) or 'Unknown HTTP error'}") from e
+services.ollama_service.OllamaError: Groq API chat failed: Client error '401 Unauthorized' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+2026-05-06 22:16:18,866 [INFO] __main__: [e35fed70] GET /api/v1/auth/me -> 200 (16.2ms)
+2026-05-06 22:16:18,923 [INFO] __main__: [4f451a04] GET /api/v1/auth/me -> 200 (1.2ms)
+2026-05-06 22:16:21,598 [ERROR] __main__: Unhandled exception: Groq API chat failed: Client error '401 Unauthorized' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 53, in chat
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '401 Unauthorized' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\chat.py", line 20, in chat
+    reply = await ollama.chat(messages, system=system)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 60, in chat
+    raise OllamaError(f"Groq API chat failed: {str(e) or 'Unknown HTTP error'}") from e
+services.ollama_service.OllamaError: Groq API chat failed: Client error '401 Unauthorized' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
+2026-05-06 22:17:49,001 [INFO] __main__: DevAssist backend starting...
