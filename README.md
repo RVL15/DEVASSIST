@@ -180,7 +180,7 @@ Here are the step-by-step instructions for Windows PowerShell (which you're usin
 
 Start Backend (Terminal 1)
 # Navigate to project root
-cd c:\Users\Admin\Desktop\devassist
+cd c:\Users\Admin\Desktop\devassist\DEVASSIST
 
 # Activate virtual environment
 .\.venv\Scripts\Activate.ps1
