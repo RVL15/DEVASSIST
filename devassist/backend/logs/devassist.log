@@ -1381,3 +1381,461 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2026-04-29 19:07:03,392 [INFO] main: [de1f04eb] GET /health -> 200 (0.6ms)
 2026-04-29 19:07:04,341 [INFO] main: [0a2ec80f] GET /health -> 200 (0.5ms)
 2026-04-29 19:07:04,665 [INFO] main: [becdefbb] GET /health -> 200 (1.3ms)
+2026-04-29 19:28:57,396 [INFO] main: [387898e6] GET /api/v1/auth/me -> 200 (5.1ms)
+2026-04-29 19:28:57,409 [INFO] main: [1d243088] GET /api/v1/auth/me -> 200 (0.9ms)
+2026-04-29 19:28:57,575 [INFO] main: [a358fc42] GET /health -> 200 (0.6ms)
+2026-04-29 19:28:57,585 [INFO] main: [12990653] GET /health -> 200 (0.8ms)
+2026-05-06 21:08:52,488 [INFO] __main__: DevAssist backend starting...
+2026-05-06 21:08:54,709 [INFO] __main__: [d23d03a8] GET /api/v1/auth/me -> 401 (2.6ms)
+2026-05-06 21:08:54,730 [INFO] __main__: [9a29bb68] GET /api/v1/auth/me -> 401 (0.9ms)
+2026-05-06 21:09:03,025 [INFO] __main__: [5a1e583b] POST /api/v1/auth/login -> 200 (5.4ms)
+2026-05-06 21:09:03,268 [INFO] __main__: [a9d8ca44] GET /api/v1/auth/me -> 200 (1.2ms)
+2026-05-06 21:09:03,346 [INFO] __main__: [e9d9ca7f] GET /health -> 200 (0.9ms)
+2026-05-06 21:09:03,629 [INFO] __main__: [4a635048] GET /health -> 200 (1.0ms)
+2026-05-06 21:09:08,881 [INFO] __main__: [28bd2be5] GET /health -> 200 (1.3ms)
+2026-05-06 21:09:09,202 [INFO] __main__: [42df1fa5] GET /health -> 200 (1.5ms)
+2026-05-06 21:09:14,503 [INFO] __main__: [36e17e26] GET /health -> 200 (1.2ms)
+2026-05-06 21:09:14,822 [INFO] __main__: [5433017b] GET /health -> 200 (0.7ms)
+2026-05-06 21:09:15,289 [INFO] __main__: [866c104c] GET /health -> 200 (1.9ms)
+2026-05-06 21:09:15,601 [INFO] __main__: [fa262c48] GET /health -> 200 (0.8ms)
+2026-05-06 21:09:18,408 [INFO] __main__: [92901884] GET /api/v1/auth/users -> 200 (0.9ms)
+2026-05-06 21:09:18,725 [INFO] __main__: [5adb59e7] GET /api/v1/auth/users -> 200 (0.8ms)
+2026-05-06 21:09:24,776 [INFO] __main__: [1810e7d6] GET /health -> 200 (3.2ms)
+2026-05-06 21:09:25,089 [INFO] __main__: [9e6bb14f] GET /health -> 200 (0.6ms)
+2026-05-06 21:09:25,652 [INFO] __main__: [11ec2b0e] GET /health -> 200 (1.4ms)
+2026-05-06 21:09:25,970 [INFO] __main__: [fd89a52d] GET /health -> 200 (1.2ms)
+2026-05-06 21:09:27,182 [INFO] __main__: [c02a0644] POST /api/v1/auth/logout -> 200 (1.3ms)
+2026-05-06 21:09:27,497 [INFO] __main__: [349050dd] GET /api/v1/auth/me -> 401 (0.7ms)
+2026-05-06 21:10:01,968 [INFO] __main__: [e956ecab] POST /api/v1/auth/login -> 200 (4.8ms)
+2026-05-06 21:10:02,296 [INFO] __main__: [ef6116b5] GET /api/v1/auth/me -> 200 (0.5ms)
+2026-05-06 21:10:02,546 [INFO] __main__: [7673972b] GET /health -> 200 (0.5ms)
+2026-05-06 21:10:02,647 [INFO] __main__: [8281d53b] GET /health -> 200 (0.5ms)
+2026-05-06 21:16:03,411 [INFO] __main__: DevAssist backend starting...
+2026-05-06 21:16:03,413 [INFO] __main__: DevAssist backend shutdown.
+2026-05-06 21:16:37,371 [INFO] __main__: DevAssist backend starting...
+2026-05-06 21:17:40,806 [INFO] __main__: [491e7c7b] GET /api/v1/auth/me -> 401 (3.2ms)
+2026-05-06 21:17:40,823 [INFO] __main__: [129433d2] GET /api/v1/auth/me -> 401 (1.4ms)
+2026-05-06 21:17:48,063 [INFO] __main__: [e58bed8c] POST /api/v1/auth/login -> 200 (7.5ms)
+2026-05-06 21:17:48,307 [INFO] __main__: [33fc1b5c] GET /api/v1/auth/me -> 200 (1.4ms)
+2026-05-06 21:17:48,379 [INFO] __main__: [2ebee3fd] GET /health -> 200 (1.0ms)
+2026-05-06 21:17:48,681 [INFO] __main__: [f7fe35b3] GET /health -> 200 (1.0ms)
+2026-05-06 21:18:13,199 [ERROR] __main__: Unhandled exception: Groq API failed: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 30, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\generate.py", line 19, in generate
+    raw = await ollama.complete(prompt, system=SYSTEM_BASE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 37, in complete
+    raise OllamaError(f"Groq API failed: {str(e) or 'Unknown HTTP error'}") from e
+services.ollama_service.OllamaError: Groq API failed: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-05-06 21:18:44,061 [INFO] __main__: [5c5db2a2] GET /health -> 200 (0.7ms)
+2026-05-06 21:18:44,312 [INFO] __main__: [c773e621] GET /health -> 200 (0.5ms)
+2026-05-06 21:20:23,131 [INFO] __main__: [8d1edeb5] GET /health -> 200 (2.0ms)
+2026-05-06 21:20:23,381 [INFO] __main__: [2a8073dd] GET /health -> 200 (0.4ms)
+2026-05-06 21:24:15,937 [INFO] __main__: DevAssist backend starting...
+2026-05-06 21:24:25,222 [INFO] __main__: DevAssist backend starting...
+2026-05-06 21:26:08,359 [INFO] __main__: [3444479a] GET /api/v1/auth/me -> 401 (12.4ms)
+2026-05-06 21:26:08,379 [INFO] __main__: [d39c9a7e] GET /api/v1/auth/me -> 401 (1.5ms)
+2026-05-06 21:26:09,338 [INFO] __main__: [37963db8] GET /api/v1/auth/me -> 401 (0.9ms)
+2026-05-06 21:26:09,349 [INFO] __main__: [c7bbc6fa] GET /api/v1/auth/me -> 401 (0.7ms)
+2026-05-06 21:26:18,076 [INFO] __main__: [0099b7d6] GET /api/v1/auth/me -> 401 (1.3ms)
+2026-05-06 21:26:18,085 [INFO] __main__: [65875a26] GET /api/v1/auth/me -> 401 (1.2ms)
+2026-05-06 21:26:23,944 [INFO] __main__: [3a94bef9] POST /api/v1/auth/login -> 200 (12.8ms)
+2026-05-06 21:26:23,961 [INFO] __main__: [5a6de3a3] GET /api/v1/auth/me -> 200 (1.8ms)
+2026-05-06 21:26:24,065 [INFO] __main__: [fb936aae] GET /health -> 200 (1.0ms)
+2026-05-06 21:26:24,078 [INFO] __main__: [52dd2622] GET /health -> 200 (1.1ms)
+2026-05-06 21:26:52,460 [ERROR] services.ollama_service: Groq API error: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-05-06 21:26:52,463 [ERROR] __main__: Unhandled exception: Groq API failed: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 30, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\generate.py", line 19, in generate
+    raw = await ollama.complete(prompt, system=SYSTEM_BASE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Groq API failed: {str(e) or 'Unknown HTTP error'}") from e
+services.ollama_service.OllamaError: Groq API failed: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-05-06 21:27:02,326 [ERROR] services.ollama_service: Groq API error: {'error': {'message': 'The model `mixtral-8x7b-32768` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-05-06 21:27:02,327 [ERROR] __main__: Unhandled exception: Groq API failed: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 30, in complete
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\generate.py", line 19, in generate
+    raw = await ollama.complete(prompt, system=SYSTEM_BASE)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Groq API failed: {str(e) or 'Unknown HTTP error'}") from e
+services.ollama_service.OllamaError: Groq API failed: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-05-06 21:27:50,322 [ERROR] __main__: Unhandled exception: Groq API chat failed: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 53, in chat
+    resp.raise_for_status()
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_models.py", line 759, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\chat.py", line 20, in chat
+    reply = await ollama.chat(messages, system=system)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 60, in chat
+    raise OllamaError(f"Groq API chat failed: {str(e) or 'Unknown HTTP error'}") from e
+services.ollama_service.OllamaError: Groq API chat failed: Client error '400 Bad Request' for url 'https://api.groq.com/openai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+2026-05-06 21:29:50,553 [INFO] __main__: DevAssist backend starting...
+2026-05-06 21:31:36,350 [INFO] __main__: DevAssist backend starting...
+2026-05-06 21:32:04,893 [INFO] __main__: [054391d4] GET /api/v1/auth/me -> 401 (2.5ms)
+2026-05-06 21:32:04,912 [INFO] __main__: [b5b02f9d] GET /api/v1/auth/me -> 401 (1.2ms)
+2026-05-06 21:32:12,961 [INFO] __main__: [36cf4e1f] POST /api/v1/auth/login -> 200 (7.6ms)
+2026-05-06 21:32:12,982 [INFO] __main__: [363e35b5] GET /api/v1/auth/me -> 200 (1.6ms)
+2026-05-06 21:32:13,067 [INFO] __main__: [b0051507] GET /health -> 200 (1.5ms)
+2026-05-06 21:32:13,382 [INFO] __main__: [499e1f74] GET /health -> 200 (0.8ms)
+2026-05-06 21:32:26,421 [WARNING] api.routes.generate: Generate parse failed: Invalid control character at: line 2 column 12 (char 13)
+2026-05-06 21:32:26,423 [INFO] __main__: [d66e2867] POST /api/v1/generate -> 200 (323.5ms)
+2026-05-06 21:33:05,331 [WARNING] api.routes.generate: Generate parse failed: Expecting ',' delimiter: line 2 column 13 (char 14)
+2026-05-06 21:33:05,333 [INFO] __main__: [3fd6e0d9] POST /api/v1/generate -> 200 (342.7ms)
+2026-05-06 21:33:18,103 [INFO] __main__: [9a70d7ba] POST /api/v1/explain -> 200 (11.2ms)
+2026-05-06 21:34:07,186 [INFO] __main__: [9c05e26e] POST /api/v1/bugfix -> 200 (973.7ms)
+2026-05-06 21:34:25,920 [WARNING] api.routes.refactor: Refactor parse failed: Expecting ',' delimiter: line 2 column 24 (char 25)
+2026-05-06 21:34:25,920 [INFO] __main__: [a2cc1380] POST /api/v1/refactor -> 200 (650.2ms)
+2026-05-06 21:34:32,583 [WARNING] api.routes.refactor: Refactor parse failed: Expecting ',' delimiter: line 2 column 24 (char 25)
+2026-05-06 21:34:32,586 [INFO] __main__: [38d05790] POST /api/v1/refactor -> 200 (935.0ms)
+2026-05-06 21:34:47,132 [INFO] __main__: [dc9cc3ad] POST /api/v1/autocomplete -> 200 (620.1ms)
+2026-05-06 21:34:54,795 [INFO] __main__: [5c3bc150] POST /api/v1/chat -> 200 (251.1ms)
+2026-05-06 21:35:06,093 [INFO] __main__: [10b7ae3f] POST /api/v1/chat -> 200 (1390.6ms)
+2026-05-06 21:35:47,738 [INFO] __main__: [66997f92] POST /api/v1/chat -> 200 (1543.7ms)
+2026-05-06 21:38:07,929 [INFO] __main__: [f298e5db] POST /api/v1/chat -> 200 (1443.9ms)
+2026-05-06 21:38:56,872 [INFO] __main__: [700a9a68] POST /api/v1/chat -> 200 (909.6ms)
+2026-05-06 21:43:21,315 [INFO] __main__: DevAssist backend starting...
+2026-05-06 21:44:02,992 [INFO] __main__: [3e5a9966] GET /api/v1/auth/me -> 401 (1.4ms)
+2026-05-06 21:44:03,010 [INFO] __main__: [8881c4ad] GET /api/v1/auth/me -> 401 (3.9ms)
+2026-05-06 21:44:07,673 [INFO] __main__: [0ea13ef1] POST /api/v1/auth/login -> 200 (9.2ms)
+2026-05-06 21:44:07,689 [INFO] __main__: [be4b2488] GET /api/v1/auth/me -> 200 (1.7ms)
+2026-05-06 21:44:07,745 [INFO] __main__: [ad391622] GET /health -> 200 (1.5ms)
+2026-05-06 21:44:07,756 [INFO] __main__: [8b1f13c3] GET /health -> 200 (0.8ms)
+2026-05-06 21:44:14,416 [INFO] __main__: [23b6844c] POST /api/v1/chat -> 200 (322.8ms)
+2026-05-06 21:44:23,209 [INFO] __main__: [ccb0dd48] POST /api/v1/chat -> 200 (318.6ms)
+2026-05-06 21:44:31,076 [INFO] __main__: [8e59a268] GET /health -> 200 (1.1ms)
+2026-05-06 21:44:31,390 [INFO] __main__: [5d05a560] GET /health -> 200 (0.5ms)
+2026-05-06 21:44:34,672 [INFO] __main__: [8e084120] GET /api/v1/auth/users -> 200 (1.2ms)
+2026-05-06 21:44:34,983 [INFO] __main__: [08588fcf] GET /api/v1/auth/users -> 200 (0.6ms)
+2026-05-06 21:44:39,709 [INFO] __main__: [5675dd9d] GET /health -> 200 (2.1ms)
+2026-05-06 21:44:40,030 [INFO] __main__: [ebbd4341] GET /health -> 200 (0.8ms)
+2026-05-06 21:48:35,032 [INFO] __main__: [5a42916d] GET /api/v1/auth/me -> 200 (5.4ms)
+2026-05-06 21:48:35,048 [INFO] __main__: [f0c0fa52] GET /api/v1/auth/me -> 200 (0.9ms)
+2026-05-06 21:48:50,058 [INFO] __main__: [14a18339] POST /api/v1/generate -> 200 (708.9ms)
+2026-05-06 21:54:25,596 [INFO] __main__: [39fb54cf] GET /api/v1/auth/me -> 200 (6.3ms)
+2026-05-06 21:54:25,615 [INFO] __main__: [7351e828] GET /api/v1/auth/me -> 200 (1.0ms)
+2026-05-06 21:54:35,572 [INFO] __main__: [d6d4515b] GET /health -> 200 (1.8ms)
+2026-05-06 21:54:35,633 [INFO] __main__: [0dfb3aaf] GET /health -> 200 (1.5ms)
+2026-05-06 21:54:43,997 [INFO] __main__: [5ed2d8c0] GET /api/v1/auth/users -> 200 (8.8ms)
+2026-05-06 21:54:44,022 [INFO] __main__: [1fc5e3c7] GET /api/v1/auth/users -> 200 (10.5ms)
+2026-05-06 21:54:47,268 [INFO] __main__: [da85dcb3] GET /health -> 200 (0.8ms)
+2026-05-06 21:54:47,520 [INFO] __main__: [ad1d7050] GET /health -> 200 (0.7ms)
+2026-05-06 21:54:51,734 [INFO] __main__: [1ae3a8f6] GET /health -> 200 (0.9ms)
+2026-05-06 21:54:52,048 [INFO] __main__: [25fa2c5d] GET /health -> 200 (0.9ms)
+2026-05-06 21:55:06,483 [INFO] __main__: [ea0b48d4] POST /api/v1/chat -> 200 (1543.1ms)
+2026-05-06 21:55:48,113 [INFO] __main__: [fb125148] DELETE /api/v1/chat/mg1ren1lt3l -> 200 (7.0ms)

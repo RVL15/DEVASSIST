@@ -130,3 +130,8 @@ if FRONTEND_DIST_DIR.exists():
 
         # SPA fallback: serve the React index.html for all other frontend routes.
         return FileResponse(FRONTEND_DIST_DIR / "index.html")
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="127.0.0.1", port=8010)

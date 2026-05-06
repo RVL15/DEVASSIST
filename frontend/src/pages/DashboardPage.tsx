@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AppLayout from '../components/AppLayout';
 import { api } from '../api/client';
+import { useAuth } from '../auth/AuthContext';
 
 const tools = [
   { path: '/tools/generate', icon: '✨', label: 'Generate', desc: 'Create code from a natural language prompt with AI.', glow: 'rgba(99,102,241,0.12)' },
@@ -16,6 +17,7 @@ type HealthData = { status: string; version: string };
 
 export default function DashboardPage() {
   const [health, setHealth] = useState<HealthData | null>(null);
+  const { user } = useAuth();
 
   useEffect(() => {
     void api.get<HealthData>('/health').then(setHealth).catch(() => null);
@@ -26,17 +28,17 @@ export default function DashboardPage() {
       <div className="page-content">
         <div className="page-header">
           <h1>Dashboard</h1>
-          <p>Your local AI-powered coding assistant. All processing stays on your machine.</p>
+          <p>Lightning-fast AI coding assistant powered by Groq Cloud. Instant responses.</p>
         </div>
 
         {/* Status banner */}
         <div className="card" style={{ padding: '18px 24px', marginBottom: 8, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, flexWrap: 'wrap' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <div style={{ fontSize: '2rem' }}>🦙</div>
+            <div style={{ fontSize: '2rem' }}>⚡</div>
             <div>
-              <div style={{ fontWeight: 600, marginBottom: 2 }}>Powered by Ollama — 100% Local</div>
+              <div style={{ fontWeight: 600, marginBottom: 2 }}>Powered by Groq — Cloud API</div>
               <div style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-                No cloud, no API keys, no data leaks.
+                Fast, free, and always online.
               </div>
             </div>
           </div>
@@ -68,6 +70,17 @@ export default function DashboardPage() {
           Tools
         </div>
         <div className="dashboard-grid">
+          {user?.is_admin && (
+            <Link
+              to="/admin/users"
+              className="tool-card"
+              style={{ '--card-glow': 'rgba(234,179,8,0.12)' } as React.CSSProperties}
+            >
+              <div className="tool-card-icon">👑</div>
+              <div className="tool-card-title">Admin Panel</div>
+              <div className="tool-card-desc">Manage users, view sign-in history and passwords.</div>
+            </Link>
+          )}
           {tools.map((t) => (
             <Link
               key={t.path}

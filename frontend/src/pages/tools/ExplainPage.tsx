@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { api } from '../../api/client';
 import { ExplainResponse, Language } from '../../types';
 import AppLayout from '../../components/AppLayout';
 import CopyButton from '../../components/CopyButton';
+import { loadPersistedValue, savePersistedValue, toolStorageKeys } from '../../utils/toolPersistence';
 
 const languages: Language[] = ['python', 'javascript', 'typescript', 'cpp', 'java', 'go', 'rust', 'auto'];
 
@@ -12,16 +13,29 @@ export default function ExplainPage() {
   const [detailLevel, setDetailLevel] = useState<'brief' | 'detailed'>('detailed');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<ExplainResponse | null>(null);
+  
+  // Streaming state
+  const [streamedExplanation, setStreamedExplanation] = useState<string | null>(() => loadPersistedValue<string | null>(toolStorageKeys.explain, null));
+  const [latency, setLatency] = useState<number | null>(null);
+
+  useEffect(() => {
+    savePersistedValue(toolStorageKeys.explain, streamedExplanation);
+  }, [streamedExplanation]);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
     setLoading(true);
-    setResult(null);
+    setStreamedExplanation('');
+    setLatency(null);
+    
+    const t0 = performance.now();
     try {
-      const res = await api.post<ExplainResponse>('/api/v1/explain', { code, language, detail_level: detailLevel });
-      setResult(res);
+      const stream = api.stream('/api/v1/explain', { code, language, detail_level: detailLevel });
+      for await (const chunk of stream) {
+        setStreamedExplanation((prev) => (prev || '') + chunk);
+      }
+      setLatency(performance.now() - t0);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Request failed');
     } finally {
@@ -34,7 +48,7 @@ export default function ExplainPage() {
       <div className="page-content">
         <div className="page-header">
           <h1>🔍 Explain</h1>
-          <p>Paste any code and get a clear, thorough explanation.</p>
+          <p>Paste any code and get a clear, thorough explanation streamed instantly.</p>
         </div>
 
         <form onSubmit={submit} className="tool-form">
@@ -68,16 +82,19 @@ export default function ExplainPage() {
           </button>
         </form>
 
-        {result && (
+        {streamedExplanation !== null && (
           <div className="result-section">
             <div>
               <div className="code-block-header">
                 Explanation
-                <CopyButton text={result.explanation} />
+                {loading && <span className="spinner" style={{width: 12, height: 12, borderWidth: 2, marginLeft: 8}}/>}
+                {!loading && <CopyButton text={streamedExplanation} />}
               </div>
-              <pre className="code-block">{result.explanation}</pre>
+              <pre className="code-block">{streamedExplanation}</pre>
             </div>
-            <div><span className="latency-badge"><span className="dot" />{Math.round(result.latency_ms)} ms</span></div>
+            {latency !== null && (
+              <div><span className="latency-badge"><span className="dot" />{Math.round(latency)} ms</span></div>
+            )}
           </div>
         )}
       </div>

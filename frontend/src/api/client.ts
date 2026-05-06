@@ -36,6 +36,29 @@ export const api = {
     }
     return (await res.json()) as T;
   },
+  async *stream(path: string, payload: unknown): AsyncGenerator<string, void, unknown> {
+    const url = `${BACKEND_URL}${path.startsWith('/') ? '' : '/'}${path}`;
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      credentials: 'include',
+    });
+
+    if (!res.ok) {
+      const text = await res.text().catch(() => '');
+      throw new Error(`API error ${res.status}: ${text || res.statusText}`);
+    }
+
+    if (!res.body) throw new Error("No response body returned");
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      yield decoder.decode(value, { stream: true });
+    }
+  }
 };
 
 export async function login(username: string, password: string) {

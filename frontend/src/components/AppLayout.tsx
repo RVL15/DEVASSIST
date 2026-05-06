@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
+
+const themeKey = 'devassist_theme';
 
 const tools = [
   { path: '/tools/generate', icon: '✨', label: 'Generate' },
@@ -15,6 +17,15 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   const { user, logout, refresh } = useAuth();
   const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [theme, setTheme] = useState<'dark' | 'light'>(() => {
+    if (typeof window === 'undefined') return 'dark';
+    return (window.localStorage.getItem(themeKey) as 'dark' | 'light' | null) || 'dark';
+  });
+
+  useEffect(() => {
+    document.body.dataset.theme = theme;
+    window.localStorage.setItem(themeKey, theme);
+  }, [theme]);
 
   const onLogout = async () => {
     await logout();
@@ -22,8 +33,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     navigate('/login', { replace: true });
   };
 
-  const initials = user ? user.slice(0, 2).toUpperCase() : '??';
+  const initials = user && user.username ? user.username.slice(0, 2).toUpperCase() : '??';
   const closeMobile = () => setMobileOpen(false);
+  const themeLabel = theme === 'dark' ? 'Light mode' : 'Dark mode';
 
   const SidebarContent = (
     <>
@@ -59,12 +71,35 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             {t.label}
           </NavLink>
         ))}
+
+        {user?.is_admin && (
+          <>
+            <div className="sidebar-section-label" style={{ marginTop: 8 }}>Admin</div>
+            <NavLink
+              to="/admin/users"
+              className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+              onClick={closeMobile}
+            >
+              <span className="nav-icon">👥</span>User Management
+            </NavLink>
+          </>
+        )}
       </nav>
 
       <div className="sidebar-footer">
+        <button
+          type="button"
+          className="theme-toggle-btn"
+          onClick={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
+          aria-label={`Switch to ${themeLabel}`}
+        >
+          <span className="theme-toggle-icon">{theme === 'dark' ? '☀️' : '🌙'}</span>
+          <span>{themeLabel}</span>
+        </button>
         <div className="user-chip">
           <div className="user-avatar">{initials}</div>
-          <span className="user-name">{user}</span>
+          <span className="user-name">{user?.username}</span>
+          {user?.is_admin && <span className="user-badge">Admin</span>}
         </div>
         <button
           id="sidebar-logout"
@@ -93,7 +128,14 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           <div className="sidebar-logo-icon" style={{ width: 26, height: 26, fontSize: 13, borderRadius: 6 }}>⚡</div>
           <span style={{ fontWeight: 700, fontSize: '0.95rem' }}>Dev<span style={{ color: 'var(--primary-light)' }}>Assist</span></span>
         </div>
-        <div style={{ width: 36 }} />
+        <button
+          type="button"
+          className="theme-toggle-btn theme-toggle-btn-sm"
+          onClick={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
+          aria-label={`Switch to ${themeLabel}`}
+        >
+          {theme === 'dark' ? '☀️' : '🌙'}
+        </button>
       </header>
 
       {/* Mobile overlay */}

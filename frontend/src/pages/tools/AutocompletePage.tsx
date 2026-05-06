@@ -3,6 +3,7 @@ import { api } from '../../api/client';
 import { AutocompleteResponse, FileContext, Language } from '../../types';
 import AppLayout from '../../components/AppLayout';
 import CopyButton from '../../components/CopyButton';
+import { loadPersistedValue, savePersistedValue, toolStorageKeys } from '../../utils/toolPersistence';
 
 const languages: Language[] = ['python', 'javascript', 'typescript', 'cpp', 'java', 'go', 'rust', 'auto'];
 
@@ -15,19 +16,19 @@ export default function AutocompletePage() {
   const [contextContent, setContextContent] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<AutocompleteResponse | null>(null);
+  const [result, setResult] = useState<AutocompleteResponse | null>(() => loadPersistedValue<AutocompleteResponse | null>(toolStorageKeys.autocomplete, null));
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
-    setResult(null);
     try {
       const file_context: FileContext | null = includeContext
         ? { content: contextContent, language: contextLanguage, filename: undefined }
         : null;
       const res = await api.post<AutocompleteResponse>('/api/v1/autocomplete', { prefix, suffix, max_tokens: maxTokens, file_context });
       setResult(res);
+      savePersistedValue(toolStorageKeys.autocomplete, res);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Request failed');
     } finally {

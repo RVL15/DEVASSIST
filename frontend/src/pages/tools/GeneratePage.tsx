@@ -3,6 +3,7 @@ import { api } from '../../api/client';
 import { GenerateResponse, Language } from '../../types';
 import AppLayout from '../../components/AppLayout';
 import CopyButton from '../../components/CopyButton';
+import { loadPersistedValue, savePersistedValue, toolStorageKeys } from '../../utils/toolPersistence';
 
 const languages: Language[] = ['python', 'javascript', 'typescript', 'cpp', 'java', 'go', 'rust', 'auto'];
 
@@ -14,19 +15,19 @@ export default function GeneratePage() {
   const [fileFilename, setFileFilename] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<GenerateResponse | null>(null);
+  const [result, setResult] = useState<GenerateResponse | null>(() => loadPersistedValue<GenerateResponse | null>(toolStorageKeys.generate, null));
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
     setLoading(true);
-    setResult(null);
     try {
       const file_context = includeFileContext
         ? { content: fileContent, filename: fileFilename || undefined, language }
         : null;
       const res = await api.post<GenerateResponse>('/api/v1/generate', { prompt, language, file_context });
       setResult(res);
+      savePersistedValue(toolStorageKeys.generate, res);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Request failed');
     } finally {

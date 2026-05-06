@@ -1,6 +1,6 @@
-# DevAssist — Local AI Developer Assistant
+# DevAssist — Fast Online AI Developer Assistant
 
-> Production-grade AI coding assistant powered by local LLMs via Ollama. No cloud, no API keys, no data leaks.
+> Production-grade AI coding assistant powered by **Groq API** (free & fast). Cloud-based, no local setup needed.
 
 ---
 
@@ -22,32 +22,32 @@
 │  ┌──────────────────────────────────────────────────┐   │
 │  │  Prompt Engineering Layer (templates.py)         │   │
 │  └──────────────────────────────────────────────────┘   │
-│  ┌──────────────────────┐  ┌────────────────────────┐   │
-│  │  LRU Cache           │  │  Session Memory        │   │
-│  └──────────────────────┘  └────────────────────────┘   │
 └────────────────────────┬────────────────────────────────┘
-                         │ HTTP
+                         │ HTTPS (async)
 ┌────────────────────────▼────────────────────────────────┐
-│              Ollama (Local LLM Server)                   │
-│                 Model: Llama3 / CodeLlama                │
+│              Groq Cloud API (Free)                       │
+│         Model: Mixtral-8x7b (ultra-fast)                │
+│         ~1-2sec inference | 25 req/day free             │
 └─────────────────────────────────────────────────────────┘
 ```
 
 ## Quick Start
 
-### 1. Install Ollama & pull model
-```bash
-curl https://ollama.ai/install.sh | sh
-ollama pull llama3        # or: ollama pull codellama
-```
+### 1. Get Free Groq API Key
+Visit https://console.groq.com/keys and sign up (free)
 
-### 2. Start backend
+### 2. Setup & Run
 ```bash
-cd backend
+cd devassist/backend
+
+# Create .env file with your API key
+echo "GROQ_API_KEY=your_key_here" > .env
+
+# Install & start
 pip install -r requirements.txt
-uvicorn main:app --reload
-# API root: http://localhost:8000/
-# Swagger docs: http://localhost:8000/docs
+python main.py
+# API: http://localhost:8010/
+# Docs: http://localhost:8010/docs
 ```
 
 ### 3. Start website (React)

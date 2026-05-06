@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { api } from '../../api/client';
 import { ChatResponse, FileContext, Language } from '../../types';
 import AppLayout from '../../components/AppLayout';
+import { loadPersistedValue, savePersistedValue, toolStorageKeys } from '../../utils/toolPersistence';
 
 const languages: Language[] = ['python', 'javascript', 'typescript', 'cpp', 'java', 'go', 'rust', 'auto'];
 type ChatMessage = { role: 'user' | 'assistant'; content: string };
@@ -11,9 +12,8 @@ function randomSessionId() {
 }
 
 export default function ChatPage() {
-  const storageKey = 'devassist_chat_session';
-  const [sessionId, setSessionId] = useState('');
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [sessionId, setSessionId] = useState(() => loadPersistedValue<string>(toolStorageKeys.chatSession, ''));
+  const [messages, setMessages] = useState<ChatMessage[]>(() => loadPersistedValue<ChatMessage[]>(toolStorageKeys.chatMessages, []));
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -23,11 +23,16 @@ export default function ChatPage() {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const existing = window.localStorage.getItem(storageKey);
-    const sid = existing || randomSessionId();
-    setSessionId(sid);
-    window.localStorage.setItem(storageKey, sid);
-  }, []);
+    if (!sessionId) {
+      const sid = randomSessionId();
+      setSessionId(sid);
+      savePersistedValue(toolStorageKeys.chatSession, sid);
+    }
+  }, [sessionId]);
+
+  useEffect(() => {
+    savePersistedValue(toolStorageKeys.chatMessages, messages);
+  }, [messages]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -64,7 +69,7 @@ export default function ChatPage() {
       setMessages([]);
       const sid = randomSessionId();
       setSessionId(sid);
-      window.localStorage.setItem(storageKey, sid);
+      savePersistedValue(toolStorageKeys.chatSession, sid);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Request failed');
     } finally {

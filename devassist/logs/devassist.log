@@ -1,0 +1,738 @@
+2026-04-29 19:29:11,422 [INFO] __main__: DevAssist backend starting...
+2026-04-29 19:29:11,425 [INFO] __main__: DevAssist backend shutdown.
+2026-04-29 19:29:26,597 [INFO] __main__: DevAssist backend starting...
+2026-04-29 19:29:26,600 [INFO] __main__: DevAssist backend shutdown.
+2026-04-29 19:29:51,732 [INFO] __main__: DevAssist backend starting...
+2026-04-29 19:29:51,823 [INFO] __main__: [6f0fc545] GET /health -> 200 (1.6ms)
+2026-04-29 19:29:51,832 [INFO] __main__: [d47b8a3b] GET /health -> 200 (0.5ms)
+2026-04-29 19:30:23,858 [INFO] __main__: [d5225dde] GET /api/v1/auth/me -> 401 (2.3ms)
+2026-04-29 19:30:23,878 [INFO] __main__: [c84376a3] GET /api/v1/auth/me -> 401 (1.0ms)
+2026-04-29 19:31:05,730 [INFO] __main__: [35c902c9] POST /api/v1/auth/login -> 200 (6.9ms)
+2026-04-29 19:31:05,744 [INFO] __main__: [3eb8f212] GET /api/v1/auth/me -> 200 (1.0ms)
+2026-04-29 19:31:05,796 [INFO] __main__: [1401627d] GET /health -> 200 (0.8ms)
+2026-04-29 19:31:05,806 [INFO] __main__: [8d327c07] GET /health -> 200 (1.0ms)
+2026-04-29 19:32:15,606 [INFO] __main__: [c920cee5] GET /api/v1/auth/me -> 200 (1.2ms)
+2026-04-29 19:32:15,621 [INFO] __main__: [b030de2e] GET /api/v1/auth/me -> 200 (0.6ms)
+2026-04-29 19:32:15,783 [INFO] __main__: [875dcbe3] GET /health -> 200 (2.1ms)
+2026-04-29 19:32:15,856 [INFO] __main__: [a46b9b53] GET /health -> 200 (0.6ms)
+2026-04-29 19:32:16,764 [INFO] __main__: [e8e47bd3] POST /api/v1/auth/logout -> 200 (1.1ms)
+2026-04-29 19:32:16,775 [INFO] __main__: [a20e3e5f] GET /api/v1/auth/me -> 401 (0.8ms)
+2026-04-29 19:32:26,307 [INFO] __main__: [d6721d6e] POST /api/v1/auth/login -> 200 (2.0ms)
+2026-04-29 19:32:26,318 [INFO] __main__: [0b346cdc] GET /api/v1/auth/me -> 200 (1.1ms)
+2026-04-29 19:32:26,676 [INFO] __main__: [6a6c6aee] GET /health -> 200 (1.1ms)
+2026-04-29 19:32:26,943 [INFO] __main__: [4eab3c17] GET /health -> 200 (1.3ms)
+2026-04-29 19:32:33,031 [INFO] __main__: [dadbee7c] GET /api/v1/auth/me -> 200 (0.9ms)
+2026-04-29 19:32:33,096 [INFO] __main__: [097717fb] GET /api/v1/auth/me -> 200 (0.9ms)
+2026-04-29 19:32:33,516 [INFO] __main__: [7f6d5115] GET /health -> 200 (0.8ms)
+2026-04-29 19:32:33,779 [INFO] __main__: [7cf4e21a] GET /health -> 200 (0.6ms)
+2026-04-29 19:32:34,862 [INFO] __main__: [c2cff39e] POST /api/v1/auth/logout -> 200 (2.7ms)
+2026-04-29 19:32:35,188 [INFO] __main__: [d5484283] GET /api/v1/auth/me -> 401 (1.3ms)
+2026-04-29 19:32:51,122 [INFO] __main__: [0e683fe7] POST /api/v1/auth/login -> 401 (2.5ms)
+2026-04-29 19:33:04,068 [INFO] __main__: [e2672e84] POST /api/v1/auth/login -> 401 (1.2ms)
+2026-04-29 19:33:17,142 [INFO] __main__: [0ff7fcbd] POST /api/v1/auth/login -> 401 (2.4ms)
+2026-04-29 19:38:31,888 [INFO] __main__: [228e19a1] POST /api/v1/auth/login -> 401 (3.5ms)
+2026-04-29 19:41:05,131 [INFO] __main__: [4d58d4fd] GET /api/v1/auth/me -> 401 (0.7ms)
+2026-04-29 19:41:05,145 [INFO] __main__: [b810a490] GET /api/v1/auth/me -> 401 (0.6ms)
+2026-04-29 19:41:05,911 [INFO] __main__: [7601ab2e] GET /api/v1/auth/me -> 401 (1.3ms)
+2026-04-29 19:41:05,918 [INFO] __main__: [9c82a790] GET /api/v1/auth/me -> 401 (0.9ms)
+2026-04-29 19:41:58,296 [INFO] __main__: DevAssist backend starting...
+2026-04-29 19:42:30,357 [INFO] __main__: [3b7b99e8] GET /api/v1/auth/me -> 401 (0.7ms)
+2026-04-29 19:42:30,370 [INFO] __main__: [d3d73447] GET /api/v1/auth/me -> 401 (1.1ms)
+2026-04-29 19:42:43,948 [INFO] __main__: [d41b0fc9] POST /api/v1/auth/login -> 403 (2.7ms)
+2026-04-29 19:42:59,687 [INFO] __main__: [b0da319c] POST /api/v1/auth/login -> 403 (3.9ms)
+2026-04-29 19:43:09,260 [INFO] __main__: [2541128a] POST /api/v1/auth/login -> 403 (1.6ms)
+2026-04-29 19:43:16,137 [INFO] __main__: [28a1735f] POST /api/v1/auth/login -> 403 (2.3ms)
+2026-04-29 19:43:20,120 [INFO] __main__: [d80ec4d6] POST /api/v1/auth/login -> 200 (2.7ms)
+2026-04-29 19:43:20,452 [INFO] __main__: [41038246] GET /api/v1/auth/me -> 200 (1.6ms)
+2026-04-29 19:43:30,626 [INFO] __main__: [c50f2d55] GET /api/v1/auth/me -> 200 (1.3ms)
+2026-04-29 19:43:30,823 [INFO] __main__: [2961faa2] GET /api/v1/auth/me -> 200 (1.6ms)
+2026-04-29 19:44:47,047 [INFO] __main__: DevAssist backend starting...
+2026-04-29 19:45:18,530 [INFO] __main__: [d25a5e00] GET /api/v1/auth/me -> 401 (0.8ms)
+2026-04-29 19:45:18,544 [INFO] __main__: [e61af053] GET /api/v1/auth/me -> 401 (1.3ms)
+2026-04-29 19:45:26,218 [INFO] __main__: [888c854c] POST /api/v1/auth/login -> 200 (2.7ms)
+2026-04-29 19:45:26,538 [INFO] __main__: [be7a5b30] GET /api/v1/auth/me -> 200 (1.6ms)
+2026-04-30 11:31:24,756 [INFO] __main__: DevAssist backend starting...
+2026-04-30 11:32:06,777 [INFO] __main__: [81d53ded] GET /api/v1/auth/me -> 401 (1.8ms)
+2026-04-30 11:32:06,806 [INFO] __main__: [8a0cba19] GET /api/v1/auth/me -> 401 (1.2ms)
+2026-04-30 11:32:15,411 [INFO] __main__: [8a3db205] POST /api/v1/auth/login -> 200 (8.3ms)
+2026-04-30 11:32:15,655 [INFO] __main__: [040aa985] GET /api/v1/auth/me -> 200 (0.7ms)
+2026-04-30 11:36:23,098 [INFO] __main__: [08f0bb37] GET /api/v1/auth/me -> 200 (8.7ms)
+2026-04-30 11:36:23,116 [INFO] __main__: [fd23ccd8] GET /api/v1/auth/me -> 200 (1.2ms)
+2026-04-30 11:37:10,058 [INFO] __main__: [d5fe40a1] GET /api/v1/auth/me -> 200 (1.1ms)
+2026-04-30 11:37:10,069 [INFO] __main__: [858377ba] GET /api/v1/auth/me -> 200 (1.2ms)
+2026-04-30 11:37:37,639 [INFO] __main__: DevAssist backend starting...
+2026-04-30 11:38:08,215 [INFO] __main__: [02efbde8] GET /api/v1/auth/me -> 401 (2.5ms)
+2026-04-30 11:38:08,233 [INFO] __main__: [02cba105] GET /api/v1/auth/me -> 401 (1.9ms)
+2026-04-30 11:38:16,175 [INFO] __main__: [9002f7b6] POST /api/v1/auth/login -> 200 (7.7ms)
+2026-04-30 11:38:16,227 [INFO] __main__: [74165079] GET /api/v1/auth/me -> 200 (2.7ms)
+2026-04-30 11:40:53,633 [INFO] __main__: [6c39ad45] GET /api/v1/auth/me -> 200 (6.9ms)
+2026-04-30 11:40:53,655 [INFO] __main__: [1e44a41a] GET /api/v1/auth/me -> 200 (1.1ms)
+2026-04-30 11:40:55,577 [INFO] __main__: [662ab58a] GET /api/v1/auth/me -> 200 (1.1ms)
+2026-04-30 11:40:55,589 [INFO] __main__: [91fa82fb] GET /api/v1/auth/me -> 200 (1.1ms)
+2026-04-30 11:40:55,862 [INFO] __main__: [6a7f0684] GET /health -> 200 (1.4ms)
+2026-04-30 11:40:55,874 [INFO] __main__: [ee0b27a7] GET /health -> 200 (1.3ms)
+2026-04-30 11:41:04,142 [INFO] __main__: [77afe348] GET /api/v1/auth/users -> 200 (19.4ms)
+2026-04-30 11:41:04,157 [INFO] __main__: [ca3bafc6] GET /api/v1/auth/users -> 200 (1.3ms)
+2026-04-30 11:41:19,167 [INFO] __main__: [3b80aa7a] POST /api/v1/auth/logout -> 200 (2.1ms)
+2026-04-30 11:41:19,415 [INFO] __main__: [fce6802a] GET /api/v1/auth/me -> 401 (0.5ms)
+2026-04-30 11:41:35,743 [INFO] __main__: [4a807f57] POST /api/v1/auth/login -> 403 (5.9ms)
+2026-04-30 11:41:46,363 [INFO] __main__: [848725ba] POST /api/v1/auth/login -> 200 (11.0ms)
+2026-04-30 11:41:46,604 [INFO] __main__: [5cc5b720] GET /api/v1/auth/me -> 200 (0.6ms)
+2026-04-30 11:41:46,675 [INFO] __main__: [ab8b30e7] GET /health -> 200 (1.2ms)
+2026-04-30 11:41:46,973 [INFO] __main__: [0b450eee] GET /health -> 200 (1.1ms)
+2026-04-30 11:41:49,519 [INFO] __main__: [8ef9414d] GET /api/v1/auth/users -> 200 (2.6ms)
+2026-04-30 11:41:49,832 [INFO] __main__: [765258ed] GET /api/v1/auth/users -> 200 (0.5ms)
+2026-04-30 11:41:51,110 [INFO] __main__: [f7a8a6ab] POST /api/v1/auth/users/RVL/approve -> 200 (4.4ms)
+2026-04-30 11:41:51,423 [INFO] __main__: [a9d55883] GET /api/v1/auth/users -> 200 (0.9ms)
+2026-04-30 11:42:00,157 [INFO] __main__: [9d5c6b90] GET /health -> 200 (1.4ms)
+2026-04-30 11:42:00,489 [INFO] __main__: [6afc8b21] GET /health -> 200 (0.9ms)
+2026-04-30 11:42:00,969 [INFO] __main__: [bd7807b5] GET /health -> 200 (1.0ms)
+2026-04-30 11:42:01,281 [INFO] __main__: [5c8ee7fb] GET /health -> 200 (0.6ms)
+2026-04-30 11:42:03,403 [INFO] __main__: [11bb5c08] POST /api/v1/auth/logout -> 200 (0.4ms)
+2026-04-30 11:42:03,719 [INFO] __main__: [98838739] GET /api/v1/auth/me -> 401 (0.7ms)
+2026-04-30 11:42:05,276 [INFO] __main__: [7f9f5a24] GET /api/v1/auth/me -> 401 (3.1ms)
+2026-04-30 11:42:05,289 [INFO] __main__: [02e90a13] GET /api/v1/auth/me -> 401 (0.8ms)
+2026-04-30 11:42:12,083 [INFO] __main__: [bab948a9] POST /api/v1/auth/login -> 200 (3.2ms)
+2026-04-30 11:42:12,097 [INFO] __main__: [fd1c6914] GET /api/v1/auth/me -> 200 (1.3ms)
+2026-04-30 11:42:12,155 [INFO] __main__: [b20a51f7] GET /health -> 200 (0.7ms)
+2026-04-30 11:42:12,469 [INFO] __main__: [3fa164f5] GET /health -> 200 (0.6ms)
+2026-04-30 11:42:30,717 [INFO] __main__: [fb24d76d] GET /api/v1/auth/me -> 200 (0.7ms)
+2026-04-30 11:42:30,896 [INFO] __main__: [f0005ecc] GET /api/v1/auth/me -> 200 (0.7ms)
+2026-04-30 11:42:30,928 [INFO] __main__: [65c80771] GET /health -> 200 (0.9ms)
+2026-04-30 11:42:30,937 [INFO] __main__: [58de8ef6] GET /health -> 200 (0.7ms)
+2026-04-30 11:42:33,358 [INFO] __main__: [c6e2064a] POST /api/v1/auth/logout -> 200 (0.7ms)
+2026-04-30 11:42:33,376 [INFO] __main__: [85193577] GET /api/v1/auth/me -> 401 (0.7ms)
+2026-04-30 11:42:42,629 [INFO] __main__: [ac11dc27] POST /api/v1/auth/login -> 200 (4.0ms)
+2026-04-30 11:42:42,947 [INFO] __main__: [d6febc0c] GET /api/v1/auth/me -> 200 (1.0ms)
+2026-04-30 11:42:43,196 [INFO] __main__: [6d4d10e9] GET /health -> 200 (1.0ms)
+2026-04-30 11:42:43,311 [INFO] __main__: [101bfc99] GET /health -> 200 (0.7ms)
+2026-04-30 11:42:46,095 [INFO] __main__: [7f9f5097] GET /api/v1/auth/users -> 200 (1.0ms)
+2026-04-30 11:42:46,407 [INFO] __main__: [97dc7c10] GET /api/v1/auth/users -> 200 (0.7ms)
+2026-04-30 11:42:55,705 [INFO] __main__: [930c1621] GET /health -> 200 (1.5ms)
+2026-04-30 11:42:56,018 [INFO] __main__: [35b89f0e] GET /health -> 200 (1.3ms)
+2026-04-30 11:42:56,921 [INFO] __main__: [203dd8a4] GET /health -> 200 (1.0ms)
+2026-04-30 11:42:57,234 [INFO] __main__: [2261ce71] GET /health -> 200 (1.2ms)
+2026-04-30 11:42:58,925 [INFO] __main__: [71e12edd] GET /api/v1/auth/users -> 200 (1.9ms)
+2026-04-30 11:42:59,239 [INFO] __main__: [39199d09] GET /api/v1/auth/users -> 200 (1.2ms)
+2026-04-30 11:44:38,022 [INFO] __main__: [869b3268] GET /api/v1/auth/me -> 200 (12.8ms)
+2026-04-30 11:44:38,062 [INFO] __main__: [afcf4397] GET /api/v1/auth/me -> 200 (1.3ms)
+2026-04-30 11:45:15,845 [INFO] __main__: [fbcdb02e] GET /api/v1/auth/me -> 200 (9.1ms)
+2026-04-30 11:45:15,886 [INFO] __main__: [3ad6d7db] GET /api/v1/auth/me -> 200 (2.0ms)
+2026-04-30 11:45:25,987 [ERROR] __main__: Unhandled exception: Ollama request failed: 
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 67, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 371, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 38, in complete
+    resp = await self._client.post("/api/generate", json=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1877, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1559, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1646, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1674, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1711, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1748, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 370, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 84, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: 
+2026-04-30 11:46:44,924 [ERROR] __main__: Unhandled exception: Ollama request failed: 
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 67, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 371, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 38, in complete
+    resp = await self._client.post("/api/generate", json=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1877, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1559, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1646, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1674, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1711, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1748, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 370, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 84, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: 
+2026-04-30 11:47:18,677 [ERROR] __main__: Unhandled exception: Ollama request failed: 
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 67, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 371, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\connection.py", line 103, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 136, in handle_async_request
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 106, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 177, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 38, in complete
+    resp = await self._client.post("/api/generate", json=payload)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1877, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1559, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1646, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1674, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1711, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_client.py", line 1748, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 370, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\httpx\_transports\default.py", line 84, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\explain.py", line 19, in explain
+    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 42, in complete
+    raise OllamaError(f"Ollama request failed: {e}") from e
+services.ollama_service.OllamaError: Ollama request failed: 
+2026-04-30 11:52:03,521 [INFO] __main__: DevAssist backend starting...
+2026-04-30 11:53:35,809 [INFO] __main__: [abd6f781] GET /api/v1/auth/me -> 401 (2.6ms)
+2026-04-30 11:53:35,841 [INFO] __main__: [96686b26] GET /api/v1/auth/me -> 401 (1.1ms)
+2026-04-30 11:53:42,699 [INFO] __main__: [1efff322] POST /api/v1/auth/login -> 200 (23.3ms)
+2026-04-30 11:53:42,724 [INFO] __main__: [43777788] GET /api/v1/auth/me -> 200 (1.2ms)
+2026-04-30 11:53:42,836 [INFO] __main__: [9e2efed7] GET /health -> 200 (0.8ms)
+2026-04-30 11:53:43,146 [INFO] __main__: [c310bbeb] GET /health -> 200 (1.0ms)
+2026-04-30 11:55:15,967 [INFO] __main__: [f74c1a33] POST /api/v1/explain -> 200 (67048.5ms)
+2026-04-30 11:58:02,490 [ERROR] __main__: Unhandled exception: Ollama request timed out. Please try again.
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 190, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 799, in __aexit__
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    |     await self.app(scope, receive, _send)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    |     with collapse_excgroups():
+    |   File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    |     return await call_next(request)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    |     raise app_exc
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    |     with collapse_excgroups():
+    |   File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    |     self.gen.throw(typ, value, traceback)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    |     raise app_exc
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    |     await self.simple_response(scope, receive, send, request_headers=headers)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    |     response = await func(request)
+    |                ^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    |     raise e
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    |     return await dependant.call(**values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\bugfix.py", line 39, in bugfix
+    |     bugs_raw = await ollama.complete(bugs_prompt, system=SYSTEM_BASE)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 44, in complete
+    |     raise OllamaError("Ollama request timed out. Please try again.")
+    | services.ollama_service.OllamaError: Ollama request timed out. Please try again.
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 80, in auth_middleware
+    return await call_next(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 189, in __call__
+    with collapse_excgroups():
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_utils.py", line 91, in collapse_excgroups
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\main.py", line 53, in request_logger
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 165, in call_next
+    raise app_exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\base.py", line 151, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 91, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\cors.py", line 146, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 762, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 782, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 297, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 77, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\starlette\routing.py", line 72, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 299, in app
+    raise e
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 294, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\.venv\Lib\site-packages\fastapi\routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\api\routes\bugfix.py", line 39, in bugfix
+    bugs_raw = await ollama.complete(bugs_prompt, system=SYSTEM_BASE)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\Desktop\PROJECTS\devassist\devassist\backend\services\ollama_service.py", line 44, in complete
+    raise OllamaError("Ollama request timed out. Please try again.")
+services.ollama_service.OllamaError: Ollama request timed out. Please try again.
+2026-04-30 12:00:37,469 [INFO] __main__: [f2e42826] GET /api/v1/auth/me -> 200 (26.0ms)
+2026-04-30 12:00:37,493 [INFO] __main__: [78ca2163] GET /api/v1/auth/me -> 200 (0.9ms)
+2026-04-30 12:00:46,859 [INFO] __main__: [8f0b5afc] GET /api/v1/auth/users -> 200 (42.2ms)
+2026-04-30 12:00:47,171 [INFO] __main__: [6e4d7238] GET /api/v1/auth/users -> 200 (1.0ms)
+2026-04-30 12:01:39,682 [INFO] __main__: [f77a5256] GET /api/v1/auth/me -> 200 (1.4ms)
+2026-04-30 12:01:39,698 [INFO] __main__: [49998bf8] GET /api/v1/auth/me -> 200 (1.7ms)
+2026-04-30 12:01:39,744 [INFO] __main__: [19e1b39c] GET /api/v1/auth/users -> 200 (3.0ms)
+2026-04-30 12:01:39,843 [INFO] __main__: [dcfd226b] GET /api/v1/auth/users -> 200 (0.7ms)
+2026-04-30 12:01:39,853 [INFO] __main__: [114ead99] GET /api/v1/auth/users -> 200 (1.1ms)
+2026-04-30 12:02:06,420 [INFO] __main__: [353b5c24] POST /api/v1/generate -> 200 (14252.6ms)
+2026-04-30 12:02:45,859 [INFO] __main__: DevAssist backend starting...
+2026-04-30 12:02:50,924 [INFO] __main__: [b5a56e2d] GET /api/v1/auth/me -> 401 (1.0ms)
+2026-04-30 12:02:50,938 [INFO] __main__: [5b72d94e] GET /api/v1/auth/me -> 401 (1.0ms)
+2026-04-30 12:02:56,762 [INFO] __main__: [dfef81f4] POST /api/v1/auth/login -> 200 (3.8ms)
+2026-04-30 12:02:56,782 [INFO] __main__: [fcb9ad8a] GET /api/v1/auth/me -> 200 (1.3ms)
+2026-04-30 12:02:57,154 [INFO] __main__: [3102a8f0] GET /health -> 200 (0.9ms)
+2026-04-30 12:02:57,406 [INFO] __main__: [9d37e13d] GET /health -> 200 (0.6ms)
+2026-04-30 12:04:01,658 [WARNING] api.routes.generate: Generate parse failed: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2026-04-30 12:04:01,659 [INFO] __main__: [f77881e1] POST /api/v1/generate -> 200 (49308.6ms)
+2026-04-30 12:04:43,680 [INFO] __main__: [f67cf8e5] POST /api/v1/chat -> 200 (42496.8ms)
+2026-04-30 12:06:16,221 [WARNING] api.routes.generate: Generate parse failed: Expecting value: line 1 column 1 (char 0)
+2026-04-30 12:06:16,222 [INFO] __main__: [600b5d01] POST /api/v1/generate -> 200 (28594.9ms)

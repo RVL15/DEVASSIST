@@ -3,6 +3,7 @@ import { api } from '../../api/client';
 import { RefactorResponse, Language } from '../../types';
 import AppLayout from '../../components/AppLayout';
 import CopyButton from '../../components/CopyButton';
+import { loadPersistedValue, savePersistedValue, toolStorageKeys } from '../../utils/toolPersistence';
 
 const languages: Language[] = ['python', 'javascript', 'typescript', 'cpp', 'java', 'go', 'rust', 'auto'];
 const goalsAll = ['readability', 'performance', 'security', 'dry'] as const;
@@ -21,16 +22,16 @@ export default function RefactorPage() {
   const [goals, setGoals] = useState<RefactorGoal[]>(['readability']);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<RefactorResponse | null>(null);
+  const [result, setResult] = useState<RefactorResponse | null>(() => loadPersistedValue<RefactorResponse | null>(toolStorageKeys.refactor, null));
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
-    setResult(null);
     try {
       const res = await api.post<RefactorResponse>('/api/v1/refactor', { code, language, goals });
       setResult(res);
+      savePersistedValue(toolStorageKeys.refactor, res);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Request failed');
     } finally {

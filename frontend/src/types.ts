@@ -57,6 +57,7 @@ export interface ChatResponse {
 
 export interface AuthMeResponse {
   username: string;
+  is_admin?: boolean;
 }
 
 export interface LoginResponse {

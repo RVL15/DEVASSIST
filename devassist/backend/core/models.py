@@ -113,3 +113,32 @@ class LoginResponse(BaseModel):
     # primarily rely on the HTTPOnly cookie.
     token: str
     latency_ms: float = 0.0
+
+
+# ── User Management ───────────────────────────────────────────────────────────
+class LoginAttempt(BaseModel):
+    timestamp: str
+    status: str
+
+
+class PasswordHistory(BaseModel):
+    password: str
+    changed_at: str
+
+
+class UserStatus(BaseModel):
+    username: str
+    status: Literal["approved", "pending", "denied"]  # approved, pending, denied
+    created_at: str
+    password: Optional[str] = None
+    login_history: Optional[List[LoginAttempt]] = None
+    password_history: Optional[List[PasswordHistory]] = None
+
+
+class UserListResponse(BaseModel):
+    users: List[UserStatus]
+
+
+class ApproveUserRequest(BaseModel):
+    username: str
+    approved: bool

@@ -8,16 +8,19 @@ from cache.lru_cache import cache
 router = APIRouter()
 
 
-@router.post("/explain", response_model=ExplainResponse)
+from fastapi.responses import StreamingResponse
+
+@router.post("/explain")
 async def explain(req: ExplainRequest):
     cached = cache.get(req.code, req.language, req.detail_level)
     if cached:
-        return ExplainResponse(explanation=cached, latency_ms=0.0)
+        # We can yield the cached result as a single chunk
+        async def cached_stream():
+            yield cached
+        return StreamingResponse(cached_stream(), media_type="text/plain")
 
     prompt = explain_prompt(req.code, req.language, req.detail_level)
-    t0 = time.perf_counter()
-    explanation = await ollama.complete(prompt, system=SYSTEM_BASE)
-    latency = (time.perf_counter() - t0) * 1000
-
-    cache.set(req.code, req.language, req.detail_level, value=explanation)
-    return ExplainResponse(explanation=explanation, latency_ms=round(latency, 2))
+    
+    # We won't cache streamed responses directly here to keep it simple and fast
+    # but you could collect it in a background task if needed.
+    return StreamingResponse(ollama.stream(prompt, system=SYSTEM_BASE), media_type="text/plain")

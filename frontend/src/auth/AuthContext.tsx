@@ -1,8 +1,14 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { authMe, login as apiLogin, logout as apiLogout } from '../api/client';
+import { clearToolStorage } from '../utils/toolPersistence';
+
+type User = {
+  username: string;
+  is_admin?: boolean;
+};
 
 type AuthContextValue = {
-  user: string | null;
+  user: User | null;
   loading: boolean;
   refresh: () => Promise<void>;
   login: (username: string, password: string) => Promise<void>;
@@ -12,13 +18,16 @@ type AuthContextValue = {
 const AuthContext = createContext<AuthContextValue | null>(null);
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
-  const [user, setUser] = useState<string | null>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
 
   const refresh = async () => {
     try {
       const me = await authMe();
-      setUser(me.username);
+      setUser({
+        username: me.username,
+        is_admin: me.is_admin,
+      });
     } catch {
       setUser(null);
     }
@@ -41,6 +50,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const logout = async () => {
     await apiLogout();
     setUser(null);
+    clearToolStorage();
   };
 
   const value = useMemo<AuthContextValue>(
