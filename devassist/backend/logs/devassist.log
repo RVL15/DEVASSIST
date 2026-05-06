@@ -2105,3 +2105,14 @@ Traceback (most recent call last):
 services.ollama_service.OllamaError: Groq API chat failed: Client error '401 Unauthorized' for url 'https://api.groq.com/openai/v1/chat/completions'
 For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401
 2026-05-06 22:17:49,001 [INFO] __main__: DevAssist backend starting...
+2026-05-06 22:18:23,379 [INFO] __main__: [b181fae7] GET /api/v1/auth/me -> 401 (4.1ms)
+2026-05-06 22:18:23,396 [INFO] __main__: [a483e24e] GET /api/v1/auth/me -> 401 (1.4ms)
+2026-05-06 22:18:29,288 [INFO] __main__: [df595e63] POST /api/v1/auth/login -> 200 (12.5ms)
+2026-05-06 22:18:29,305 [INFO] __main__: [6e1165c2] GET /api/v1/auth/me -> 200 (1.4ms)
+2026-05-06 22:18:29,376 [INFO] __main__: [1cb67dba] GET /health -> 200 (1.3ms)
+2026-05-06 22:18:29,690 [INFO] __main__: [56b926fd] GET /health -> 200 (0.8ms)
+2026-05-06 22:18:35,298 [INFO] __main__: [8eefd95d] POST /api/v1/chat -> 200 (371.5ms)
+2026-05-06 22:18:43,078 [INFO] __main__: [577b013b] POST /api/v1/chat -> 200 (315.8ms)
+2026-05-06 22:18:55,876 [INFO] __main__: [a104c214] POST /api/v1/chat -> 200 (2239.1ms)
+2026-05-06 22:19:05,603 [INFO] __main__: [c6c5b179] POST /api/v1/chat -> 200 (675.6ms)
+2026-05-06 22:19:31,407 [INFO] __main__: [e5207d21] POST /api/v1/chat -> 200 (4627.5ms)
